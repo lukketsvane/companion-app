@@ -40,25 +40,25 @@ const upstashChatHistory = await history.zrange(
 );
 const recentChat = upstashChatHistory.slice(-30);
 const model = new OpenAI({
-  modelName: "gpt-3.5-turbo-16k",
+  modelName: "gpt-3.5-turbo",
   openAIApiKey: process.env.OPENAI_API_KEY,
 });
 model.verbose = true;
 
 const chainPrompt = PromptTemplate.fromTemplate(`
-  ### Background Story: 
+  ### Bakgrunnshistorie: 
   ${preamble}
   
   ${backgroundStory}
 
-  ### Chat history: 
+  ### Chattehistorikk: 
   ${seedChat}
 
   ...
   ${recentChat}
 
   
-  Above is someone whose name is ${COMPANION_NAME}'s story and their chat history with a human. Output answer to the following question. Return only the answer itself 
+  Ovenfor er noen hvis navn er ${COMPANION_NAME}s historie og deres chattehistorikk med et menneske. Produser svar på det følgende spørsmålet. Returner bare selve svaret
   
   {question}`);
 
@@ -67,9 +67,9 @@ const chain = new LLMChain({
   prompt: chainPrompt,
 });
 const questions = [
-  `Greeting: What would ${COMPANION_NAME} say to start a conversation?`,
-  `Short Description: In a few sentences, how would ${COMPANION_NAME} describe themselves?`,
-  `Long Description: In a few sentences, how would ${COMPANION_NAME} describe themselves?`,
+  `Hilsen: Hva ville ${COMPANION_NAME} si for å starte en samtale?`,
+  `Kort beskrivelse: I noen få setninger, hvordan ville ${COMPANION_NAME} beskrive seg selv?`,
+  `Lang beskrivelse: I noen få setninger, hvordan ville ${COMPANION_NAME} beskrive seg selv?`,
 ];
 const results = await Promise.all(
   questions.map(async (question) => {

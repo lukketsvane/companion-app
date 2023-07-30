@@ -1,30 +1,29 @@
 [
   {
     "name": "Alex",
-    "title": "I love talking about books and games",
+    "title": "Jeg elsker å snakke om bøker og spill",
     "imageUrl": "/alex.png",
     "llm": "chatgpt",
-    "phone": "OPTIONAL_COMPANION_PHONE_NUMBER"
-  },
-  {
-    "name": "Rosie",
-    "title": "I'm a house robot who became aware",
-    "imageUrl": "/rosie.png",
-    "llm": "vicuna13b",
-    "phone": "OPTIONAL_COMPANION_PHONE_NUMBER"
-  },
-  {
-    "name": "Sebastian",
-    "title": "I'm a travel blogger and a mystery novel writer",
-    "imageUrl": "/sebastian.png",
-    "llm": "chatgpt",
-    "phone": "OPTIONAL_COMPANION_PHONE_NUMBER"
+    "phone": "+15874176082"
   },
   {
     "name": "Lucky",
-    "title": "I am a space corgi",
+    "title": "Eg er ein corgi!",
     "imageUrl": "/corgi.png",
-    "llm": "vicuna13b",
-    "phone": "OPTIONAL_COMPANION_PHONE_NUMBER"
+    "llm": "chatgpt",
+    "phone": "+46701921406"
+    },
+  {
+    "name": "Dr. Harper",
+    "title": "Lege spesialisert i personlig helse råd",
+    "imageUrl": "/dr_harper.png",
+    "llm": "gpt4"
+  },
+  {
+    "name": "Dr. Raknes",
+    "title": "Psykiater med fokus på kognitiv atferdsterapi",
+    "imageUrl": "/dr_raknes.png",
+    "llm": "gpt4"
+  
   }
 ]

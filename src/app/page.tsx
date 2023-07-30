@@ -3,15 +3,15 @@ import Examples from "@/components/Examples";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between">
+    <main className="flex min-h-screen flex-col items-center justify-between bg-white text-black">
       <Navbar />
-      <div className="w-full min-h-screen relative isolate overflow-hidden bg-gray-900 px-6 py-24 shadow-2xl sm:px-24 xl:py-32">
-        <h1 className="mt-16 mx-auto max-w-2xl text-center text-5xl font-bold tracking-tight text-white sm:text-6xl">
-          AI Companion
+      <div className="w-full min-h-screen relative isolate overflow-hidden bg-white px-6 py-24 shadow-2xl sm:px-24 xl:py-32">
+        <h1 className="mt-16 mx-auto max-w-2xl text-center text-5xl font-bold tracking-tight text-black sm:text-6xl">
+          AI Kamerat
         </h1>
 
-        <p className="mx-auto mt-4 max-w-xl text-center text-xl leading-8 text-slate-400">
-          Help you setup an AI companion project with ease. Here are some example characters: 
+        <p className="mx-auto mt-4 max-w-xl text-center text-xl leading-8 text-gray-700">
+          Snakk med en AI-kamerat på enkelt vis. her er noen eksempler:
         </p>
 
         <Examples />
@@ -37,8 +37,8 @@ export default function Home() {
               gradientUnits="userSpaceOnUse"
               gradientTransform="translate(512 512) rotate(90) scale(512)"
             >
-              <stop stopColor="rgb(17 24 39)" />
-              <stop offset={1} stopColor="rgb(125 211 252)" stopOpacity={0} />
+              <stop stopColor="rgb(255 255 255)" />
+              <stop offset={1} stopColor="rgb(255 255 255)" stopOpacity={0} />
             </radialGradient>
           </defs>
         </svg>

@@ -76,7 +76,7 @@ export async function POST(req: Request) {
 
   const companionKey = {
     companionName: name!,
-    modelName: "chatgpt",
+    modelName: "gpt-4",
     userId: clerkUserId,
   };
   const memoryManager = await MemoryManager.getInstance();
@@ -104,7 +104,7 @@ export async function POST(req: Request) {
 
   const model = new OpenAI({
     streaming: true,
-    modelName: "gpt-3.5-turbo-16k",
+    modelName: "gpt-4",
     openAIApiKey: process.env.OPENAI_API_KEY,
     callbackManager: CallbackManager.fromHandlers(handlers),
   });
